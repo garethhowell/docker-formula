@@ -52,7 +52,7 @@ purge old packages:
 docker package repository:
   pkgrepo.managed:
 #    - name: deb https://apt.dockerproject.org/repo {{ grains["os"]|lower }}-{{ grains["oscodename"] }} main
-    - name: deb https://download.docker.com/linux {{ grains["os"]|lower }}-{{ grains["oscodename"] }} main
+    - name: deb https://download.docker.com/linux/{{ grains["os"]|lower }} {{ grains["oscodename"] }} main
     - humanname: {{ grains["os"] }} {{ grains["oscodename"]|capitalize }} Docker Package Repository
     - keyid: 58118E89F3A912897C070ADBF76221572C52609D
 {%- endif %}
